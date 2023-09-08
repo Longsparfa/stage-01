@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>StageOneTask</title>
+</head>
+<body>
+    <h1 data-testid="slackUserName">Longs Parfa</h1>
+    <img src="./Parfa001.png" alt="Parfa001" data-testid="slackDisplayImage">
+
+    <h2 id="day"></h2>
+    <h3 id="UTCtime"></h3>
+
+    <h4 data-testid="myTrack">Frontend Track</h4>
+
+    <p><a href="http://" data-testid="githubURL">SourceCode</a></p>
+
+
+    <script>
+        const update = () => {
+
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            const currentDayOfTheWeek = daysOfWeek[new Date().getDay()];
+            document.getElementById('day').textContent = currentDayOfTheWeek
+
+
+            const now = new Date();
+            const options = {hour: '2-digit', minute: '2-digit', second: '2-digit', timeZonename: 'short'}
+            const currentUTCtime = now.toLocaleTimeString('en-US', options)
+            document.getElementById('UTCtime').textContent = currentUTCtime
+        }
+
+        setInterval(update, 1000)
+
+        update();
+
+    </script>
+</body>
+</html>

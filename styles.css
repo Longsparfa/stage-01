@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "helvetica neue", helvetica, "lucinda sans unicode", "sans serif";
+  font-weight: normal;
+  background: #242424;
+  color: #fff;
+  text-align: center;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
