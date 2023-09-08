@@ -16,7 +16,7 @@
 
     <h4 data-testid="myTrack">Frontend Track</h4>
 
-    <p><a href="https://github.com/Longsparfa/stage-01" data-testid="githubURL">SourceCode</a></p>
+    <a href="https://github.com/Longsparfa/stage-01" data-testid="githubURL">SourceCode</a>
 
 
     <script>
@@ -28,9 +28,10 @@
 
 
             const now = new Date();
-            const options = {hour: '2-digit', minute: '2-digit', second: '2-digit', timeZonename: 'short'}
-            const currentUTCtime = now.toLocaleTimeString('en-US', options)
-            document.getElementById('UTCtime').textContent = currentUTCtime
+            const milliseconds = now.getTime();
+            // const options = {hour: '2-digit', minute: '2-digit', second: '2-digit', timeZonename: 'short'}
+            // const currentUTCtime = now.toLocaleTimeString('en-US', options)
+            document.getElementById('UTCtime').textContent = milliseconds
         }
 
         setInterval(update, 1000)
